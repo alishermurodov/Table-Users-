@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top_btn">
+            <h2 class="title_main">User List</h2>
+            <div class="top_btns">
+                <div class="add_btn"><button class="add_user_btn btn">+ New</button></div>
+                <div class="dark_ligth">
+                    <button class="btn light_btn"><img src="img/light.png" alt="" width="14px" height="14px">
+                        Light</button>
+                    <button class="btn dark_btn">dark <img src="img/dark.png" alt="" width="14px"
+                            height="14px"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status_city_search">
+
+            <div class="status_city">
+                <fieldset class="fieldsetCss">
+                    <legend class="legend">Status</legend>
+                    <!-- <label for="combo-box" class="label">All status</label> -->
+                    <select name="status" id="combo-box">
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fieldsetCss">
+                    <legend class="legend">City</legend>
+                    <!-- <label for="combo-box" class="label">All cities</label> -->
+                    <select name="city" class="al_city" id="combo-box selectCSS">
+                        <option value="all">all</option>
+                        <option value="Dushanbe">Dushanbe</option>
+                        <option value="Bokhtar">Bokhtar</option>
+                        <option value="Khujand">Khujand</option>
+                        <option value="Hisor">Hisor</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="search">
+                <fieldset class="fieldset">
+                    <legend class="legend">search</legend>
+                    <form class="formSearch">
+                        <input name="search" class="search" type="search" placeholder="Name, email, etc...">
+                        <img src="img/SearchFilled.png" alt="" class="searchImg">
+                    </form>
+                </fieldset>
+            </div>
+
+        </div>
+        <div class="table_div">
+            <table class="table">
+                <thead class="thead">
+                    <tr class="trhead">
+                        <th class="th">
+                            <div class="name_th"><img class="th_img" src="img/user.png" alt=""> Name</div>
+                        </th>
+                        <th class="th">
+                            <div class="gorod"><img class="th_img" src="img/lock.png" alt=""> Город</div>
+                        </th>
+                        <th class="th">
+                            <div class="status_th"><img class="th_img" src="img/clock.png" alt=""> Status</div>
+                        </th>
+                        <th class="th">
+                            <div class="phone_th"><img class="th_img" src="img/number.png" alt=""> Phone</div>
+                        </th>
+                        <th class="th"></th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!--  -->
+                </tbody>
+            </table>
+        </div>
+
+        <dialog class="dialogAdd">
+            <div class="h3_x">
+                <h3>Add new</h3>
+                <h2 class="closeDAdd">X</h2>
+            </div>
+            <form class="form1">
+                <input name="imgInp" type="text" placeholder=".png / .jpg / .jpeg">
+                <input name="nameInp" type="text" placeholder="Name">
+                <input name="surnameInp" type="text" placeholder="Surname">
+                <input name="emailInp" type="email" placeholder="email">
+                <div class="radios">
+                    <input type="radio" id="active" name="ac">
+                    <label for="active">Active</label>
+                    <input type="radio" id="inactive" name="ac">
+                    <label for="inactive">Inactive</label>
+                </div>
+                <fieldset class="fieldset fieldsetDialog">
+                    <legend class="legend">City</legend>
+                    <label for="combo-box" class="label">All cities</label>
+                    <select name="city" id="combo-box">
+                        <option value="Dushanbe">Dushanbe</option>
+                        <option value="Bokhtar">Bokhtar</option>
+                        <option value="Khujand">Khujand</option>
+                        <option value="Hisor">Hisor</option>
+                    </select>
+                </fieldset>
+                <input type="tel" name="phoneInp" placeholder="Phone number">
+                <div class="form1Btns">
+
+                    <button class="savebtn" type="submit">SAVE</button>
+            </form>
+            <button class="cansel">CANSEL</button>
+        </dialog>
+    </div>
+
+    </div>
+
+    <dialog class="modalDeletEdit">
+        <div class="profile">
+            <img src="img/user.png" alt="">
+            <p>View profile</p>
+        </div>
+        <div class="profile">
+            <img src="img/change.png" alt="">
+            <p class="editmod">Edit</p>
+        </div>
+        <div class="profileDel">
+            <img src="img/Delete.png" alt="">
+            <p class="deletemod">Delete</p>
+        </div>
+        <p class="exit">exit</p>
+    </dialog>
+
+    <!-- dialog edit  -->
+
+    <dialog class="dialogEdit">
+        <div class="h3_x">
+            <h3>Add new</h3>
+            <h2 class="closeDAEdit">X</h2>
+        </div>
+        <form class="form2">
+            <input name="imgInp" type="text" placeholder=".png / .jpg / .jpeg">
+            <input name="nameInp" type="text" placeholder="Name">
+            <input name="surnameInp" type="text" placeholder="Surname">
+            <input name="emailInp" type="email" placeholder="email">
+            <div class="radios">
+                <input type="radio" id="active" name="ac">
+                <label for="active">Active</label>
+                <input type="radio" id="inactive" name="ac">
+                <label for="inactive">Inactive</label>
+            </div>
+            <fieldset class="fieldset fieldsetDialog">
+                <legend class="legend">City</legend>
+                <label for="combo-box" class="label">All cities</label>
+                <select name="city" id="combo-box">
+                    <option value="Dushanbe">Dushanbe</option>
+                    <option value="Bokhtar">Bokhtar</option>
+                    <option value="Khujand">Khujand</option>
+                    <option value="Hisor">Hisor</option>
+                </select>
+            </fieldset>
+            <input type="tel" name="phoneInp" placeholder="Phone number">
+            <div class="form1Btns">
+
+                <button class="savebtn" type="submit">EDIT</button>
+        </form>
+        <button class="cansel">CANSEL</button>
+        </div>
+    </dialog>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
